@@ -9,6 +9,7 @@
 #import "InmueblesBuilder.h"
 
 
+
 @implementation InmueblesBuilder
 
 -(NSMutableArray *)inmuebles{
@@ -37,7 +38,6 @@
         //Iterar sobre identificadoresInmuebles para obtener el Objeto inmueble del jsonresult
         for(NSString *iden in identificadoresInmuebles){
             //NSLog(@"INMUEBLE: %@", [json objectForKey:iden]);
-            
             Inmueble *inmueble = [[Inmueble alloc] initWithId:[iden integerValue]
                                                          Tipo:(NSString *)[[json objectForKey:iden] objectForKey:@"tipo"]
                                                   Transaccion:(NSString *)[[json objectForKey:iden] objectForKey:@"transaccion"]
@@ -49,9 +49,8 @@
                                                       Latitud:(NSString *)[[json objectForKey:iden] objectForKey:@"latitud"]
                                                      Longitud:(NSString *)[[json objectForKey:iden] objectForKey:@"longitud"]
                                                         Img:(NSString *)[[json objectForKey:iden] objectForKey:@"imgPrincipal"]
-                                                    Imagenes:(NSMutableArray *)[[json objectForKey:iden] objectForKey:@"imagenes"]
                                   ];
-            
+            // Imagenes:(NSMutableArray *)[[json objectForKey:iden] objectForKey:@"imagenes"]
             [self.inmuebles addObject:inmueble];
         }
          

@@ -13,5 +13,6 @@
     return nil;
 }
 - (Inmueble *) getInmueblePorId:(NSInteger)idInmueble{
+    return nil;
 }
 @end

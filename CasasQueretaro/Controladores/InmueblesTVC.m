@@ -12,6 +12,7 @@
 
 @interface InmueblesTVC () <UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) InmueblesProxy *inmuebles;
+@property (strong, nonatomic) NSCache *imageCache;
 @end
 
 @implementation InmueblesTVC
@@ -22,6 +23,12 @@
     }
     return _inmuebles;
 
+}
+
+- (void)initializeCache{
+    _imageCache = [[NSCache alloc] init];
+    _imageCache.name = @"Custom Image Cache";
+    _imageCache.countLimit = 50;
 }
 
 // Table view data source
@@ -44,15 +51,37 @@
     cell.textLabel.text = inmuTmp.colonia;
     cell.detailTextLabel.text = inmuTmp.ciudad;
     
-    NSURL *imageURl = [[NSURL alloc] initWithString:inmuTmp.imgPrincipal];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURl];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    UIImage *image = [[UIImage alloc] initWithData:imageData];
-    
-    cell.imageView.image = image;
-
-    
+    UIImage *image = [self.imageCache objectForKey:inmuTmp.imgPrincipal];
+    if (image){
+        // if we have an cachedImage sitting in memory already, then use it
+        cell.imageView.image = image;
+    }else{
+        cell.imageView.image = [UIImage imageNamed:@"noImage300x225.png"];
+        // the get the image in the background
+        dispatch_queue_t imageFetcherQ = dispatch_queue_create("image fetcher", NULL);
+        dispatch_async(imageFetcherQ, ^{
+            //[NSThread sleepForTimeInterval:2.0];
+            NSLog(@"Procesando imagen en el thread %@", inmuTmp.imgPrincipal);
+            // get the UIImage
+            NSURL *imageURl = [[NSURL alloc] initWithString:inmuTmp.imgPrincipal];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+            NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURl];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            UIImage *imagen = [[UIImage alloc] initWithData:imageData];
+            // if we found it, then update UI
+            if (imagen){
+                NSLog(@"Thread obtuvo la imagen %@", inmuTmp.imgPrincipal);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // if the cell is visible, then set the image
+                    UITableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath];
+                    if (cell2){
+                        cell2.imageView.image = imagen;
+                    }
+                });
+                [self.imageCache setObject:imagen forKey:inmuTmp.imgPrincipal];
+            }
+        });
+    }
     return cell;
 }
 
@@ -75,6 +104,10 @@
         }
         
     }
+}
+
+- (void) viewDidLoad{
+    [self initializeCache];
 }
 
 @end
