@@ -10,4 +10,29 @@
 
 @implementation Inmueble
 
+-(Inmueble *) initWithId:(NSInteger)idInmu
+                    Tipo:(NSString *)tipo
+             Transaccion:(NSString *)transaccion
+                  Ciudad:(NSString *)ciudad
+                 Colonia:(NSString *)colonia
+             Descripcion:(NSString *)descripcion
+                  Precio:(NSInteger)precio
+                  Moneda:(NSString *)moneda
+                 Latitud:(NSString *)latitud
+                Longitud:(NSString *)longitud
+                     Img:(NSString *)imgPrincipal{
+    self.idInmueble = idInmu;
+    self.tipo = tipo;
+    self.transaccion = transaccion;
+    self.ciudad = ciudad;
+    self.colonia = colonia;
+    self.descripcion = descripcion;
+    self.precio = precio;
+    self.moneda = moneda;
+    self.latitud = latitud;
+    self.longitud = longitud;
+    self.imgPrincipal = imgPrincipal;
+    return self;
+}
+
 @end

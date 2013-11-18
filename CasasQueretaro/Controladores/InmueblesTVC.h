@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface InmueblesTVC : UITableViewController
-
+@property (strong, nonatomic) NSString *tipoInmueble;
 @end

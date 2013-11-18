@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7573A53183A943A00FC51C4 /* InmueblesProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A52183A943A00FC51C4 /* InmueblesProxy.m */; };
+		A7573A56183A961F00FC51C4 /* CasasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A55183A961F00FC51C4 /* CasasTVC.m */; };
+		A7573A59183A969600FC51C4 /* DepartamentosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A58183A969600FC51C4 /* DepartamentosTVC.m */; };
+		A7573A5C183A971D00FC51C4 /* TerrenosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A5B183A971C00FC51C4 /* TerrenosTVC.m */; };
+		A7573A5F183A974200FC51C4 /* OtrosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A5E183A974200FC51C4 /* OtrosTVC.m */; };
+		A7573A61183A987800FC51C4 /* btn_casa36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A60183A987800FC51C4 /* btn_casa36x36.png */; };
+		A7573A65183A992B00FC51C4 /* btn_dpto36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A62183A992B00FC51C4 /* btn_dpto36x36.png */; };
+		A7573A66183A992B00FC51C4 /* btn_otro36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A63183A992B00FC51C4 /* btn_otro36x36.png */; };
+		A7573A67183A992B00FC51C4 /* btn_terreno36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A64183A992B00FC51C4 /* btn_terreno36x36.png */; };
+		A7573A69183A9C9600FC51C4 /* btn_mapa36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A68183A9C9600FC51C4 /* btn_mapa36x36.png */; };
+		A7573A6B183A9DBB00FC51C4 /* btn_galeria36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A6A183A9DBB00FC51C4 /* btn_galeria36x36.png */; };
+		A7573A6D183A9E4800FC51C4 /* btn_contacto36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A6C183A9E4800FC51C4 /* btn_contacto36x36.png */; };
+		A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */; };
 		A7AA0AFC1839A9F80039A1EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFB1839A9F80039A1EC /* UIKit.framework */; };
 		A7AA0AFE1839A9F80039A1EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFD1839A9F80039A1EC /* Foundation.framework */; };
 		A7AA0B001839A9F80039A1EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFF1839A9F80039A1EC /* CoreGraphics.framework */; };
@@ -26,6 +39,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7573A51183A943A00FC51C4 /* InmueblesProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesProxy.h; path = Modelos/InmueblesProxy.h; sourceTree = "<group>"; };
+		A7573A52183A943A00FC51C4 /* InmueblesProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesProxy.m; path = Modelos/InmueblesProxy.m; sourceTree = "<group>"; };
+		A7573A54183A961F00FC51C4 /* CasasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CasasTVC.h; path = Controladores/CasasTVC.h; sourceTree = "<group>"; };
+		A7573A55183A961F00FC51C4 /* CasasTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CasasTVC.m; path = Controladores/CasasTVC.m; sourceTree = "<group>"; };
+		A7573A57183A969600FC51C4 /* DepartamentosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartamentosTVC.h; path = Controladores/DepartamentosTVC.h; sourceTree = "<group>"; };
+		A7573A58183A969600FC51C4 /* DepartamentosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DepartamentosTVC.m; path = Controladores/DepartamentosTVC.m; sourceTree = "<group>"; };
+		A7573A5A183A971C00FC51C4 /* TerrenosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerrenosTVC.h; path = Controladores/TerrenosTVC.h; sourceTree = "<group>"; };
+		A7573A5B183A971C00FC51C4 /* TerrenosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerrenosTVC.m; path = Controladores/TerrenosTVC.m; sourceTree = "<group>"; };
+		A7573A5D183A974200FC51C4 /* OtrosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtrosTVC.h; path = Controladores/OtrosTVC.h; sourceTree = "<group>"; };
+		A7573A5E183A974200FC51C4 /* OtrosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OtrosTVC.m; path = Controladores/OtrosTVC.m; sourceTree = "<group>"; };
+		A7573A60183A987800FC51C4 /* btn_casa36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_casa36x36.png; sourceTree = "<group>"; };
+		A7573A62183A992B00FC51C4 /* btn_dpto36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_dpto36x36.png; sourceTree = "<group>"; };
+		A7573A63183A992B00FC51C4 /* btn_otro36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_otro36x36.png; sourceTree = "<group>"; };
+		A7573A64183A992B00FC51C4 /* btn_terreno36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_terreno36x36.png; sourceTree = "<group>"; };
+		A7573A68183A9C9600FC51C4 /* btn_mapa36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_mapa36x36.png; sourceTree = "<group>"; };
+		A7573A6A183A9DBB00FC51C4 /* btn_galeria36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_galeria36x36.png; sourceTree = "<group>"; };
+		A7573A6C183A9E4800FC51C4 /* btn_contacto36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_contacto36x36.png; sourceTree = "<group>"; };
+		A7573A6E183A9FAE00FC51C4 /* VerInmuebleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerInmuebleVC.h; path = Controladores/VerInmuebleVC.h; sourceTree = "<group>"; };
+		A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerInmuebleVC.m; path = Controladores/VerInmuebleVC.m; sourceTree = "<group>"; };
 		A7AA0AF81839A9F80039A1EC /* CasasQueretaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasasQueretaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AA0AFB1839A9F80039A1EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7AA0AFD1839A9F80039A1EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +154,16 @@
 			children = (
 				A7B2CD301839D98F00EB72E8 /* InmueblesTVC.h */,
 				A7B2CD311839D98F00EB72E8 /* InmueblesTVC.m */,
+				A7573A54183A961F00FC51C4 /* CasasTVC.h */,
+				A7573A55183A961F00FC51C4 /* CasasTVC.m */,
+				A7573A57183A969600FC51C4 /* DepartamentosTVC.h */,
+				A7573A58183A969600FC51C4 /* DepartamentosTVC.m */,
+				A7573A5A183A971C00FC51C4 /* TerrenosTVC.h */,
+				A7573A5B183A971C00FC51C4 /* TerrenosTVC.m */,
+				A7573A5D183A974200FC51C4 /* OtrosTVC.h */,
+				A7573A5E183A974200FC51C4 /* OtrosTVC.m */,
+				A7573A6E183A9FAE00FC51C4 /* VerInmuebleVC.h */,
+				A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +171,13 @@
 		A7B2CD281839D4C700EB72E8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A7573A6C183A9E4800FC51C4 /* btn_contacto36x36.png */,
+				A7573A6A183A9DBB00FC51C4 /* btn_galeria36x36.png */,
+				A7573A68183A9C9600FC51C4 /* btn_mapa36x36.png */,
+				A7573A62183A992B00FC51C4 /* btn_dpto36x36.png */,
+				A7573A63183A992B00FC51C4 /* btn_otro36x36.png */,
+				A7573A64183A992B00FC51C4 /* btn_terreno36x36.png */,
+				A7573A60183A987800FC51C4 /* btn_casa36x36.png */,
 				A7B2CD2B1839D58700EB72E8 /* Default-568h@2x.png */,
 				A7B2CD261839D4AF00EB72E8 /* Default@2x.png */,
 				A7B2CD241839D47000EB72E8 /* Default.png */,
@@ -155,6 +204,8 @@
 				A7B2CD2E1839D7E800EB72E8 /* Inmueble.m */,
 				A7B2CD331839DC6E00EB72E8 /* Inmuebles.h */,
 				A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */,
+				A7573A51183A943A00FC51C4 /* InmueblesProxy.h */,
+				A7573A52183A943A00FC51C4 /* InmueblesProxy.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -218,6 +269,13 @@
 				A7B2CD251839D47000EB72E8 /* Default.png in Resources */,
 				A7B2CD271839D4AF00EB72E8 /* Default@2x.png in Resources */,
 				A7B2CD2C1839D58700EB72E8 /* Default-568h@2x.png in Resources */,
+				A7573A61183A987800FC51C4 /* btn_casa36x36.png in Resources */,
+				A7573A65183A992B00FC51C4 /* btn_dpto36x36.png in Resources */,
+				A7573A66183A992B00FC51C4 /* btn_otro36x36.png in Resources */,
+				A7573A67183A992B00FC51C4 /* btn_terreno36x36.png in Resources */,
+				A7573A69183A9C9600FC51C4 /* btn_mapa36x36.png in Resources */,
+				A7573A6B183A9DBB00FC51C4 /* btn_galeria36x36.png in Resources */,
+				A7573A6D183A9E4800FC51C4 /* btn_contacto36x36.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +291,12 @@
 				A7B2CD2F1839D7E800EB72E8 /* Inmueble.m in Sources */,
 				A7B2CD321839D98F00EB72E8 /* InmueblesTVC.m in Sources */,
 				A7B2CD351839DC6E00EB72E8 /* Inmuebles.m in Sources */,
+				A7573A53183A943A00FC51C4 /* InmueblesProxy.m in Sources */,
+				A7573A56183A961F00FC51C4 /* CasasTVC.m in Sources */,
+				A7573A59183A969600FC51C4 /* DepartamentosTVC.m in Sources */,
+				A7573A5C183A971D00FC51C4 /* TerrenosTVC.m in Sources */,
+				A7573A5F183A974200FC51C4 /* OtrosTVC.m in Sources */,
+				A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
