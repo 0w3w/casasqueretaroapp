@@ -25,10 +25,13 @@
 
 }
 
-- (void)initializeCache{
-    _imageCache = [[NSCache alloc] init];
-    _imageCache.name = @"Custom Image Cache";
-    _imageCache.countLimit = 50;
+- (NSCache *)imageCache{
+    if(!_imageCache){
+        _imageCache = [[NSCache alloc] init];
+        _imageCache.name = @"Custom Image Cache";
+        _imageCache.countLimit = 50;
+    }
+    return _imageCache;
 }
 
 // Table view data source
@@ -47,9 +50,14 @@
     
     NSArray *allInmuebles = [self.inmuebles getInmueblesPorTipo:self.tipoInmueble];
     Inmueble *inmuTmp = allInmuebles[indexPath.row];
+    
     // Configure the cell...
     cell.textLabel.text = inmuTmp.colonia;
-    cell.detailTextLabel.text = inmuTmp.ciudad;
+    if([self.tipoInmueble isEqualToString:@"otros"]){
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@ - %@", [inmuTmp getFormatedPrecio], inmuTmp.moneda, inmuTmp.tipo];
+    }else{
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@ - %@", [inmuTmp getFormatedPrecio], inmuTmp.moneda, inmuTmp.ciudad];
+    }
     
     UIImage *image = [self.imageCache objectForKey:inmuTmp.imgPrincipal];
     if (image){
@@ -61,9 +69,11 @@
         dispatch_queue_t imageFetcherQ = dispatch_queue_create("image fetcher", NULL);
         dispatch_async(imageFetcherQ, ^{
             //[NSThread sleepForTimeInterval:2.0];
-            NSLog(@"Procesando imagen en el thread %@", inmuTmp.imgPrincipal);
             // get the UIImage
-            NSURL *imageURl = [[NSURL alloc] initWithString:inmuTmp.imgPrincipal];
+            NSString * imgFullPath = [[NSString alloc] initWithFormat:@"%@%@",inmuTmp.imgPath,inmuTmp.imgPrincipal];
+            NSLog(@"Img inmu.imgPath %@", inmuTmp.imgPath);
+            NSLog(@"Procesando imagen en el thread %@", imgFullPath);
+            NSURL *imageURl = [[NSURL alloc] initWithString:imgFullPath];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
             NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURl];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -105,9 +115,4 @@
         
     }
 }
-
-- (void) viewDidLoad{
-    [self initializeCache];
-}
-
 @end

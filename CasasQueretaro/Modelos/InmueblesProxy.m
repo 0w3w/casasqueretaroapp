@@ -12,47 +12,39 @@
 
 @interface InmueblesProxy ()
 @property (strong, nonatomic) Inmuebles *inmuebles;
-@property (strong, nonatomic) NSMutableArray *inmueblesCache;
+@property (strong, nonatomic) NSCache *inmueblesCache;
 @end
 
 @implementation InmueblesProxy
 
-- (NSMutableArray *) inmueblesCache{
+- (Inmuebles*) inmuebles{
+    if (!_inmuebles){
+        _inmuebles = [[Inmuebles alloc] init];
+    }
+    return _inmuebles;
+}
+
+- (NSCache *)inmueblesCache{
     if(!_inmueblesCache){
-        Inmueble *inmu01 = [[Inmueble alloc] initWithId:1
-                                                   Tipo:@"Casa"
-                                            Transaccion:@"Venta"
-                                                 Ciudad:@"Querétaro"
-                                                Colonia:@"Juriquilla Segunda Seccion"
-                                            Descripcion:@"Lindo departamento de uso mixto comercial habitacional en planta baja, ubicado en el centro de la ciudad, en privada con vigilancia, ideal para emprender un negocio."
-                                                 Precio:200000
-                                                 Moneda:@"MXN"
-                                                Latitud:@"20.58751419247153"
-                                               Longitud:@"-100.39645671844482"
-                                                    Img:@"http://casasqueretaro.com.mx/api/shortImg/imgP_2f09f1da1e.jpg"];
-        Inmueble *inmu02 = [[Inmueble alloc] initWithId:1
-                                                   Tipo:@"Casa"
-                                            Transaccion:@"Venta"
-                                                 Ciudad:@"Querétaro"
-                                                Colonia:@"Juriquilla Segunda Seccion"
-                                            Descripcion:@"Lindo departamento de uso mixto comercial habitacional en planta baja, ubicado en el centro de la ciudad, en privada con vigilancia, ideal para emprender un negocio."
-                                                 Precio:200000
-                                                 Moneda:@"MXN"
-                                                Latitud:@"20.58751419247153"
-                                               Longitud:@"-100.39645671844482"
-                                                    Img:@"http://casasqueretaro.com.mx/api/shortImg/imgP_d35af91c75.jpg"];
-        _inmueblesCache = [[NSMutableArray alloc] initWithObjects: inmu01, inmu02, inmu01, inmu02, inmu01, inmu02, inmu01, inmu02, inmu01, inmu02, inmu01, inmu02, inmu01, nil];
+        _inmueblesCache = [[NSCache alloc] init];
+        _inmueblesCache.name = @"Custom Image Cache";
+        _inmueblesCache.countLimit = 50;
     }
     return _inmueblesCache;
 }
 
 - (NSArray *) getInmueblesPorTipo:(NSString*)tipo{
-    // XXX usar el objeto inmuebles para obtener los datos
-    return self.inmueblesCache;
+    NSArray *tipoArr = [self.inmueblesCache objectForKey:tipo];
+    if(!tipoArr){
+        tipoArr = [self.inmuebles getInmueblesPorTipo:tipo];
+        [self.inmueblesCache setObject:tipoArr forKey:tipo];
+    }
+    return tipoArr;
 }
 
 - (Inmueble *) getInmueblePorId:(NSInteger)idInmueble{
-    return (Inmueble *) self.inmueblesCache[0];
+    // XXX Implementar Esto
+    return nil;
 }
 
 @end

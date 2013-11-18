@@ -22,6 +22,7 @@
 @property(strong, nonatomic) NSString *longitud;
 @property(strong, nonatomic) NSString *imgPrincipal;
 @property(strong, nonatomic) NSMutableArray *imagenes;
+@property(strong, nonatomic) NSString *imgPath;
 
 -(Inmueble *) initWithId:(NSInteger)idInmu
                     Tipo:(NSString *)tipo
@@ -33,6 +34,9 @@
                   Moneda:(NSString *)moneda
                  Latitud:(NSString *)latitud
                 Longitud:(NSString *)longitud
-                     Img:(NSString *)imgPrincipal;
+                     Img:(NSString *)imgPrincipal
+                 imgPath:(NSString *)imgPath;
+
+-(NSString *) getFormatedPrecio;
 
 @end

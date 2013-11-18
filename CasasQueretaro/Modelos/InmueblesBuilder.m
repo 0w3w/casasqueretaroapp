@@ -19,45 +19,37 @@
     return _inmuebles;
 }
 
-- (NSMutableArray *)inmueblesFromJSON:(id)json
-{
+- (NSMutableArray *)inmueblesFromJSON:(id)json imagePath:(NSString*) imgPath{
     //Diccionario
-    if([json isKindOfClass:[NSDictionary class]])
-    {
+    if([json isKindOfClass:[NSDictionary class]]){
         NSMutableArray *identificadoresInmuebles = [[NSMutableArray alloc] init];
         
         for (id dict in json) {
-            
             //NSLog(@"diccionario: %@", dict);
             //NSLog(@"Su clase es %@", [dict class]);
-            
             [identificadoresInmuebles addObject:dict];
-            
         }
         
         //Iterar sobre identificadoresInmuebles para obtener el Objeto inmueble del jsonresult
         for(NSString *iden in identificadoresInmuebles){
             //NSLog(@"INMUEBLE: %@", [json objectForKey:iden]);
-            Inmueble *inmueble = [[Inmueble alloc] initWithId:[iden integerValue]
-                                                         Tipo:(NSString *)[[json objectForKey:iden] objectForKey:@"tipo"]
-                                                  Transaccion:(NSString *)[[json objectForKey:iden] objectForKey:@"transaccion"]
-                                                       Ciudad:(NSString *)[[json objectForKey:iden] objectForKey:@"ciudad"]
-                                                      Colonia:(NSString *)[[json objectForKey:iden] objectForKey:@"colonia"]
-                                                  Descripcion:(NSString *)[[json objectForKey:iden] objectForKey:@"descripcion"]
-                                                       Precio:[[[json objectForKey:iden] objectForKey:@"precio"] integerValue]
-                                                       Moneda:(NSString *)[[json objectForKey:iden] objectForKey:@"moneda"]
-                                                      Latitud:(NSString *)[[json objectForKey:iden] objectForKey:@"latitud"]
-                                                     Longitud:(NSString *)[[json objectForKey:iden] objectForKey:@"longitud"]
-                                                        Img:(NSString *)[[json objectForKey:iden] objectForKey:@"imgPrincipal"]
+            id JsonObj = [json objectForKey:iden];
+            Inmueble * inmueble = [[Inmueble alloc] initWithId:[iden integerValue]
+                                                         Tipo:(NSString *)[JsonObj objectForKey:@"tipo"]
+                                                  Transaccion:(NSString *)[JsonObj objectForKey:@"transaccion"]
+                                                       Ciudad:(NSString *)[JsonObj objectForKey:@"ciudad"]
+                                                      Colonia:(NSString *)[JsonObj objectForKey:@"colonia"]
+                                                  Descripcion:(NSString *)[JsonObj objectForKey:@"descripcion"]
+                                                       Precio:[[JsonObj objectForKey:@"precio"] integerValue]
+                                                       Moneda:(NSString *)[JsonObj objectForKey:@"moneda"]
+                                                      Latitud:(NSString *)[JsonObj objectForKey:@"latitud"]
+                                                     Longitud:(NSString *)[JsonObj objectForKey:@"longitud"]
+                                                           Img:(NSString *)[JsonObj objectForKey:@"imgPrincipal"]
+                                                       imgPath:imgPath
                                   ];
             // Imagenes:(NSMutableArray *)[[json objectForKey:iden] objectForKey:@"imagenes"]
             [self.inmuebles addObject:inmueble];
-        }
-         
-         for (Inmueble * i in self.inmuebles) {
-             NSLog(@"INMUEBLE: %d", i.idInmueble);
-         }
-         
+        }         
     }
 
     
