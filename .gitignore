@@ -1,5 +1,5 @@
 # Xcode
-build/*
+*/build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -14,6 +14,9 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+.idea/
+*.hmap
+*.xccheckout
 
 # OSX Noise
 .DS_Store
@@ -23,3 +26,6 @@ profile
 *.DS_Store
 *.swp
 *.out
+
+#CocoaPods
+Pods
