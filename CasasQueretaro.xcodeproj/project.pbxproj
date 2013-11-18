@@ -13,12 +13,16 @@
 		A7AA0B061839A9F80039A1EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7AA0B041839A9F80039A1EC /* InfoPlist.strings */; };
 		A7AA0B081839A9F80039A1EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AA0B071839A9F80039A1EC /* main.m */; };
 		A7AA0B0C1839A9F80039A1EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AA0B0B1839A9F80039A1EC /* AppDelegate.m */; };
-		A7AA0B0E1839A9F80039A1EC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AA0B0D1839A9F80039A1EC /* Default.png */; };
-		A7AA0B101839A9F80039A1EC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AA0B0F1839A9F80039A1EC /* Default@2x.png */; };
-		A7AA0B121839A9F80039A1EC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AA0B111839A9F80039A1EC /* Default-568h@2x.png */; };
 		A7AA0B151839A9F80039A1EC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AA0B131839A9F80039A1EC /* MainStoryboard_iPhone.storyboard */; };
 		A7AA0B181839A9F80039A1EC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AA0B161839A9F80039A1EC /* MainStoryboard_iPad.storyboard */; };
-		A7AA0B1B1839A9F80039A1EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AA0B1A1839A9F80039A1EC /* ViewController.m */; };
+		A7B2CD211839D3E200EB72E8 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2CD201839D3E200EB72E8 /* AppIcon57x57.png */; };
+		A7B2CD231839D3E800EB72E8 /* AppIcon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2CD221839D3E800EB72E8 /* AppIcon114x114.png */; };
+		A7B2CD251839D47000EB72E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2CD241839D47000EB72E8 /* Default.png */; };
+		A7B2CD271839D4AF00EB72E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2CD261839D4AF00EB72E8 /* Default@2x.png */; };
+		A7B2CD2C1839D58700EB72E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2CD2B1839D58700EB72E8 /* Default-568h@2x.png */; };
+		A7B2CD2F1839D7E800EB72E8 /* Inmueble.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2CD2E1839D7E800EB72E8 /* Inmueble.m */; };
+		A7B2CD321839D98F00EB72E8 /* InmueblesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2CD311839D98F00EB72E8 /* InmueblesTVC.m */; };
+		A7B2CD351839DC6E00EB72E8 /* Inmuebles.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,13 +36,19 @@
 		A7AA0B091839A9F80039A1EC /* CasasQueretaro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CasasQueretaro-Prefix.pch"; sourceTree = "<group>"; };
 		A7AA0B0A1839A9F80039A1EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7AA0B0B1839A9F80039A1EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7AA0B0D1839A9F80039A1EC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A7AA0B0F1839A9F80039A1EC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A7AA0B111839A9F80039A1EC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A7AA0B141839A9F80039A1EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		A7AA0B171839A9F80039A1EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		A7AA0B191839A9F80039A1EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A7AA0B1A1839A9F80039A1EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A7B2CD201839D3E200EB72E8 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		A7B2CD221839D3E800EB72E8 /* AppIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon114x114.png; sourceTree = "<group>"; };
+		A7B2CD241839D47000EB72E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A7B2CD261839D4AF00EB72E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A7B2CD2B1839D58700EB72E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A7B2CD2D1839D7E800EB72E8 /* Inmueble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Inmueble.h; path = Modelos/Inmueble.h; sourceTree = "<group>"; };
+		A7B2CD2E1839D7E800EB72E8 /* Inmueble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Inmueble.m; path = Modelos/Inmueble.m; sourceTree = "<group>"; };
+		A7B2CD301839D98F00EB72E8 /* InmueblesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesTVC.h; path = Controladores/InmueblesTVC.h; sourceTree = "<group>"; };
+		A7B2CD311839D98F00EB72E8 /* InmueblesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesTVC.m; path = Controladores/InmueblesTVC.m; sourceTree = "<group>"; };
+		A7B2CD331839DC6E00EB72E8 /* Inmuebles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Inmuebles.h; path = Modelos/Inmuebles.h; sourceTree = "<group>"; };
+		A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Inmuebles.m; path = Modelos/Inmuebles.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +95,10 @@
 		A7AA0B011839A9F80039A1EC /* CasasQueretaro */ = {
 			isa = PBXGroup;
 			children = (
-				A7AA0B0A1839A9F80039A1EC /* AppDelegate.h */,
-				A7AA0B0B1839A9F80039A1EC /* AppDelegate.m */,
-				A7AA0B131839A9F80039A1EC /* MainStoryboard_iPhone.storyboard */,
-				A7AA0B161839A9F80039A1EC /* MainStoryboard_iPad.storyboard */,
-				A7AA0B191839A9F80039A1EC /* ViewController.h */,
-				A7AA0B1A1839A9F80039A1EC /* ViewController.m */,
+				A7B2CD1F1839D09A00EB72E8 /* Controllers */,
+				A7B2CD2A1839D50F00EB72E8 /* Models */,
+				A7B2CD291839D50900EB72E8 /* Views */,
+				A7B2CD281839D4C700EB72E8 /* Images */,
 				A7AA0B021839A9F80039A1EC /* Supporting Files */,
 			);
 			path = CasasQueretaro;
@@ -99,15 +107,56 @@
 		A7AA0B021839A9F80039A1EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7AA0B0A1839A9F80039A1EC /* AppDelegate.h */,
+				A7AA0B0B1839A9F80039A1EC /* AppDelegate.m */,
 				A7AA0B031839A9F80039A1EC /* CasasQueretaro-Info.plist */,
 				A7AA0B041839A9F80039A1EC /* InfoPlist.strings */,
 				A7AA0B071839A9F80039A1EC /* main.m */,
 				A7AA0B091839A9F80039A1EC /* CasasQueretaro-Prefix.pch */,
-				A7AA0B0D1839A9F80039A1EC /* Default.png */,
-				A7AA0B0F1839A9F80039A1EC /* Default@2x.png */,
-				A7AA0B111839A9F80039A1EC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7B2CD1F1839D09A00EB72E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7B2CD301839D98F00EB72E8 /* InmueblesTVC.h */,
+				A7B2CD311839D98F00EB72E8 /* InmueblesTVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A7B2CD281839D4C700EB72E8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A7B2CD2B1839D58700EB72E8 /* Default-568h@2x.png */,
+				A7B2CD261839D4AF00EB72E8 /* Default@2x.png */,
+				A7B2CD241839D47000EB72E8 /* Default.png */,
+				A7B2CD221839D3E800EB72E8 /* AppIcon114x114.png */,
+				A7B2CD201839D3E200EB72E8 /* AppIcon57x57.png */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A7B2CD291839D50900EB72E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7AA0B131839A9F80039A1EC /* MainStoryboard_iPhone.storyboard */,
+				A7AA0B161839A9F80039A1EC /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A7B2CD2A1839D50F00EB72E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7B2CD2D1839D7E800EB72E8 /* Inmueble.h */,
+				A7B2CD2E1839D7E800EB72E8 /* Inmueble.m */,
+				A7B2CD331839DC6E00EB72E8 /* Inmuebles.h */,
+				A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,11 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7AA0B061839A9F80039A1EC /* InfoPlist.strings in Resources */,
-				A7AA0B0E1839A9F80039A1EC /* Default.png in Resources */,
-				A7AA0B101839A9F80039A1EC /* Default@2x.png in Resources */,
-				A7AA0B121839A9F80039A1EC /* Default-568h@2x.png in Resources */,
 				A7AA0B151839A9F80039A1EC /* MainStoryboard_iPhone.storyboard in Resources */,
 				A7AA0B181839A9F80039A1EC /* MainStoryboard_iPad.storyboard in Resources */,
+				A7B2CD211839D3E200EB72E8 /* AppIcon57x57.png in Resources */,
+				A7B2CD231839D3E800EB72E8 /* AppIcon114x114.png in Resources */,
+				A7B2CD251839D47000EB72E8 /* Default.png in Resources */,
+				A7B2CD271839D4AF00EB72E8 /* Default@2x.png in Resources */,
+				A7B2CD2C1839D58700EB72E8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +230,9 @@
 			files = (
 				A7AA0B081839A9F80039A1EC /* main.m in Sources */,
 				A7AA0B0C1839A9F80039A1EC /* AppDelegate.m in Sources */,
-				A7AA0B1B1839A9F80039A1EC /* ViewController.m in Sources */,
+				A7B2CD2F1839D7E800EB72E8 /* Inmueble.m in Sources */,
+				A7B2CD321839D98F00EB72E8 /* InmueblesTVC.m in Sources */,
+				A7B2CD351839DC6E00EB72E8 /* Inmuebles.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +367,7 @@
 				A7AA0B201839A9F80039A1EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
