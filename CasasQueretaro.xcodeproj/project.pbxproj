@@ -278,6 +278,7 @@
 				GCC_PREFIX_HEADER = "CasasQueretaro/CasasQueretaro-Prefix.pch";
 				INFOPLIST_FILE = "CasasQueretaro/CasasQueretaro-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -289,6 +290,7 @@
 				GCC_PREFIX_HEADER = "CasasQueretaro/CasasQueretaro-Prefix.pch";
 				INFOPLIST_FILE = "CasasQueretaro/CasasQueretaro-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
