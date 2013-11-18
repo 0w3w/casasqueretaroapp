@@ -20,7 +20,9 @@
                   Moneda:(NSString *)moneda
                  Latitud:(NSString *)latitud
                 Longitud:(NSString *)longitud
-                     Img:(NSString *)imgPrincipal{
+                     Img:(NSString *)imgPrincipal
+                Imagenes:(NSMutableArray *)imagenes{
+    
     self.idInmueble = idInmu;
     self.tipo = tipo;
     self.transaccion = transaccion;
@@ -32,6 +34,9 @@
     self.latitud = latitud;
     self.longitud = longitud;
     self.imgPrincipal = imgPrincipal;
+    self.imagenes = imagenes;
+    
+    
     return self;
 }
 

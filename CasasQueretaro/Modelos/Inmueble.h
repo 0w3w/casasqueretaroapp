@@ -33,6 +33,7 @@
                   Moneda:(NSString *)moneda
                  Latitud:(NSString *)latitud
                 Longitud:(NSString *)longitud
-                     Img:(NSString *)imgPrincipal;
+                     Img:(NSString *)imgPrincipal
+                Imagenes:(NSMutableArray *)imagenes;
 
 @end
