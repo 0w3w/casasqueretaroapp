@@ -20,6 +20,8 @@
 		A7573A6B183A9DBB00FC51C4 /* btn_galeria36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A6A183A9DBB00FC51C4 /* btn_galeria36x36.png */; };
 		A7573A6D183A9E4800FC51C4 /* btn_contacto36x36.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A6C183A9E4800FC51C4 /* btn_contacto36x36.png */; };
 		A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */; };
+		A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */; };
+		A7573A75183AAAC400FC51C4 /* noImage300x225.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A74183AAAC400FC51C4 /* noImage300x225.png */; };
 		A7AA0AFC1839A9F80039A1EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFB1839A9F80039A1EC /* UIKit.framework */; };
 		A7AA0AFE1839A9F80039A1EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFD1839A9F80039A1EC /* Foundation.framework */; };
 		A7AA0B001839A9F80039A1EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFF1839A9F80039A1EC /* CoreGraphics.framework */; };
@@ -58,6 +60,9 @@
 		A7573A6C183A9E4800FC51C4 /* btn_contacto36x36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_contacto36x36.png; sourceTree = "<group>"; };
 		A7573A6E183A9FAE00FC51C4 /* VerInmuebleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerInmuebleVC.h; path = Controladores/VerInmuebleVC.h; sourceTree = "<group>"; };
 		A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerInmuebleVC.m; path = Controladores/VerInmuebleVC.m; sourceTree = "<group>"; };
+		A7573A71183AAAA600FC51C4 /* InmueblesBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesBuilder.h; path = Modelos/InmueblesBuilder.h; sourceTree = "<group>"; };
+		A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesBuilder.m; path = Modelos/InmueblesBuilder.m; sourceTree = "<group>"; };
+		A7573A74183AAAC400FC51C4 /* noImage300x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage300x225.png; sourceTree = "<group>"; };
 		A7AA0AF81839A9F80039A1EC /* CasasQueretaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasasQueretaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AA0AFB1839A9F80039A1EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7AA0AFD1839A9F80039A1EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -171,6 +176,7 @@
 		A7B2CD281839D4C700EB72E8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A7573A74183AAAC400FC51C4 /* noImage300x225.png */,
 				A7573A6C183A9E4800FC51C4 /* btn_contacto36x36.png */,
 				A7573A6A183A9DBB00FC51C4 /* btn_galeria36x36.png */,
 				A7573A68183A9C9600FC51C4 /* btn_mapa36x36.png */,
@@ -200,6 +206,8 @@
 		A7B2CD2A1839D50F00EB72E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A7573A71183AAAA600FC51C4 /* InmueblesBuilder.h */,
+				A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */,
 				A7B2CD2D1839D7E800EB72E8 /* Inmueble.h */,
 				A7B2CD2E1839D7E800EB72E8 /* Inmueble.m */,
 				A7B2CD331839DC6E00EB72E8 /* Inmuebles.h */,
@@ -276,6 +284,7 @@
 				A7573A69183A9C9600FC51C4 /* btn_mapa36x36.png in Resources */,
 				A7573A6B183A9DBB00FC51C4 /* btn_galeria36x36.png in Resources */,
 				A7573A6D183A9E4800FC51C4 /* btn_contacto36x36.png in Resources */,
+				A7573A75183AAAC400FC51C4 /* noImage300x225.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +306,7 @@
 				A7573A5C183A971D00FC51C4 /* TerrenosTVC.m in Sources */,
 				A7573A5F183A974200FC51C4 /* OtrosTVC.m in Sources */,
 				A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */,
+				A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

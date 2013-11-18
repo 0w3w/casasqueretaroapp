@@ -21,6 +21,7 @@
                  Latitud:(NSString *)latitud
                 Longitud:(NSString *)longitud
                      Img:(NSString *)imgPrincipal
+                 imgPath:(NSString *)imgPath
                 Imagenes:(NSMutableArray *)imagenes{
     
     self.idInmueble = idInmu;
@@ -35,9 +36,18 @@
     self.longitud = longitud;
     self.imgPrincipal = imgPrincipal;
     self.imagenes = imagenes;
-    
-    
+    self.imgPath= imgPath;
     return self;
 }
-
+-(NSString *) getFormatedPrecio{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    [formatter setGroupingSeparator:groupingSeparator];
+    [formatter setGroupingSize:3];
+    [formatter setAlwaysShowsDecimalSeparator:NO];
+    [formatter setUsesGroupingSeparator:YES];
+    NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInt:self.precio]];
+    return formattedString;
+}
 @end

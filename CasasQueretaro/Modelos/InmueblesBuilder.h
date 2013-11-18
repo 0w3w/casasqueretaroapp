@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) NSMutableArray *inmuebles;
 
-- (NSMutableArray *)inmueblesFromJSON:(id)json;
+- (NSMutableArray *)inmueblesFromJSON:(id)json imagePath:(NSString*) imgPath;
 
 @end
