@@ -71,8 +71,6 @@
             //[NSThread sleepForTimeInterval:2.0];
             // get the UIImage
             NSString * imgFullPath = [[NSString alloc] initWithFormat:@"%@%@",inmuTmp.imgPath,inmuTmp.imgPrincipal];
-            NSLog(@"Img inmu.imgPath %@", inmuTmp.imgPath);
-            NSLog(@"Procesando imagen en el thread %@", imgFullPath);
             NSURL *imageURl = [[NSURL alloc] initWithString:imgFullPath];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
             NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURl];
@@ -80,7 +78,6 @@
             UIImage *imagen = [[UIImage alloc] initWithData:imageData];
             // if we found it, then update UI
             if (imagen){
-                NSLog(@"Thread obtuvo la imagen %@", inmuTmp.imgPrincipal);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     // if the cell is visible, then set the image
                     UITableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath];
