@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GXs-SQ-ZS0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GXs-SQ-ZS0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -97,7 +97,6 @@
         <!--Ver InmuebleVC-->
         <scene sceneID="9dk-g5-NJm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g5L-Zr-qZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sY2-sW-FIX" customClass="VerInmuebleVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KCc-8q-R6Y">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -192,6 +191,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pcT-qr-OFn"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5L-Zr-qZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1183" y="-925"/>
         </scene>
@@ -339,14 +339,35 @@
             </objects>
             <point key="canvasLocation" x="-2716" y="1240"/>
         </scene>
-        <!--View Controller - Contacto-->
+        <!--ContactoVC - Contacto-->
         <scene sceneID="vQR-aB-dRY">
             <objects>
-                <viewController id="1hF-us-zIw" sceneMemberID="viewController">
+                <viewController id="1hF-us-zIw" customClass="ContactoVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEA-nl-69i">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Y-ju-YWX">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Presiona para enviar un correo nuevo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botonEnviarCorreo:" destination="1hF-us-zIw" eventType="touchUpInside" id="WFA-0n-BY5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K6Y-ju-YWX" firstAttribute="bottom" secondItem="hEA-nl-69i" secondAttribute="bottom" type="default" id="8yh-JW-yx4"/>
+                            <constraint firstItem="K6Y-ju-YWX" firstAttribute="top" secondItem="hEA-nl-69i" secondAttribute="top" type="default" id="bHC-Uj-ARQ"/>
+                            <constraint firstItem="K6Y-ju-YWX" firstAttribute="leading" secondItem="hEA-nl-69i" secondAttribute="leading" type="default" id="cqy-9q-rHx"/>
+                            <constraint firstItem="K6Y-ju-YWX" firstAttribute="trailing" secondItem="hEA-nl-69i" secondAttribute="trailing" type="default" id="weQ-nP-reN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contacto" image="btn_contacto36x36.png" id="1d3-OI-kv0"/>
                 </viewController>
@@ -443,6 +464,12 @@
     <classes>
         <class className="CasasTVC" superclassName="InmueblesTVC">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CasasTVC.h"/>
+        </class>
+        <class className="ContactoVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactoVC.h"/>
+            <relationships>
+                <relationship kind="action" name="botonEnviarCorreo:" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="DepartamentosTVC" superclassName="InmueblesTVC">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DepartamentosTVC.h"/>

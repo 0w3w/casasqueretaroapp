@@ -21,23 +21,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:YES];
-    
-    // Email Subject
-    NSString *emailTitle = @"Casas Querétaro";
-    // Email Content
-    NSString *messageBody = @"<h1>Gracias por contactarnos, a la brevedad nos comunicaremos contigo</h1>";
-    // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"ventas@casasqueretaro.com.mx"];
-    
-    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-    mc.mailComposeDelegate = self;
-    [mc setSubject:emailTitle];
-    [mc setMessageBody:messageBody isHTML:YES];
-    [mc setToRecipients:toRecipents];
-    
-    // Present mail view controller on screen
-    [self presentViewController:mc animated:YES completion:NULL];
+    [super viewWillAppear:NO];
+    [self cargarControladorMail];
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller
@@ -65,6 +50,33 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+- (IBAction)botonEnviarCorreo:(UIButton *)sender {
+    [self cargarControladorMail];
+}
+
+- (void) cargarControladorMail
+{
+    // Email Subject
+    NSString *emailTitle = @"Contacto Casas Querétaro";
+    // Email Content
+    NSString *messageBody = @"<h1>Gracias por contactarnos, a la brevedad nos comunicaremos contigo</h1>";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"ventas@casasqueretaro.com.mx"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:YES];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    //[self presentViewController:mc animated:YES completion:NULL];
+    [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:mc
+                                                                                             animated:YES
+                                                                                           completion:nil];
+}
+
 
 
 @end

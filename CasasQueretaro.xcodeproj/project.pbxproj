@@ -157,7 +157,6 @@
 		A7AA0AEF1839A9F80039A1EC = {
 			isa = PBXGroup;
 			children = (
-				A6432C05183AE916009C01F5 /* MessageUI.framework */,
 				A7AA0B011839A9F80039A1EC /* CasasQueretaro */,
 				A7AA0AFA1839A9F80039A1EC /* Frameworks */,
 				A7AA0AF91839A9F80039A1EC /* Products */,
@@ -175,6 +174,7 @@
 		A7AA0AFA1839A9F80039A1EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6432C05183AE916009C01F5 /* MessageUI.framework */,
 				A6432BFE183AD48A009C01F5 /* SystemConfiguration.framework */,
 				A6432BFC183AD482009C01F5 /* QuartzCore.framework */,
 				A6432BFA183AD47B009C01F5 /* OpenGLES.framework */,
