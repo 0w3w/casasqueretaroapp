@@ -22,6 +22,7 @@
 		A6432BFB183AD47B009C01F5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432BFA183AD47B009C01F5 /* OpenGLES.framework */; };
 		A6432BFD183AD482009C01F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432BFC183AD482009C01F5 /* QuartzCore.framework */; };
 		A6432BFF183AD48A009C01F5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432BFE183AD48A009C01F5 /* SystemConfiguration.framework */; };
+		A6432C01183ADEA6009C01F5 /* casita.png in Resources */ = {isa = PBXBuildFile; fileRef = A6432C00183ADEA6009C01F5 /* casita.png */; };
 		A7573A53183A943A00FC51C4 /* InmueblesProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A52183A943A00FC51C4 /* InmueblesProxy.m */; };
 		A7573A56183A961F00FC51C4 /* CasasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A55183A961F00FC51C4 /* CasasTVC.m */; };
 		A7573A59183A969600FC51C4 /* DepartamentosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A58183A969600FC51C4 /* DepartamentosTVC.m */; };
@@ -72,6 +73,7 @@
 		A6432BFA183AD47B009C01F5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A6432BFC183AD482009C01F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A6432BFE183AD48A009C01F5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A6432C00183ADEA6009C01F5 /* casita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casita.png; sourceTree = "<group>"; };
 		A7573A51183A943A00FC51C4 /* InmueblesProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesProxy.h; path = Modelos/InmueblesProxy.h; sourceTree = "<group>"; };
 		A7573A52183A943A00FC51C4 /* InmueblesProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesProxy.m; path = Modelos/InmueblesProxy.m; sourceTree = "<group>"; };
 		A7573A54183A961F00FC51C4 /* CasasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CasasTVC.h; path = Controladores/CasasTVC.h; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				A7B2CD241839D47000EB72E8 /* Default.png */,
 				A7B2CD221839D3E800EB72E8 /* AppIcon114x114.png */,
 				A7B2CD201839D3E200EB72E8 /* AppIcon57x57.png */,
+				A6432C00183ADEA6009C01F5 /* casita.png */,
 			);
 			name = Images;
 			path = ..;
@@ -346,6 +349,7 @@
 				A7573A6D183A9E4800FC51C4 /* btn_contacto36x36.png in Resources */,
 				A7573A75183AAAC400FC51C4 /* noImage300x225.png in Resources */,
 				A6432BE7183AD417009C01F5 /* GoogleMaps.bundle in Resources */,
+				A6432C01183ADEA6009C01F5 /* casita.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

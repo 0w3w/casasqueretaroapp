@@ -8,6 +8,8 @@
 
 #import "MapaVC.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "Inmuebles.h"
+#import "Inmueble.h"
 
 @interface MapaVC (){
     GMSMapView *mapView_;
@@ -21,21 +23,22 @@
 {
     [super viewDidLoad];
 	
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.myLocationEnabled = YES;
-    self.view = mapView_;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:20.592134
+                                                            longitude:-100.378475
+                                                                 zoom:11];
+    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = mapView_;
+    //Arreglo de marcadores
+    Inmuebles *inm = [[Inmuebles alloc] init];
+    NSArray *arrInmuebles = [inm getInmueblesPorTipo:nil];
+    for (Inmueble * i in arrInmuebles) {
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = CLLocationCoordinate2DMake([i.latitud doubleValue], [i.longitud doubleValue]);
+        marker.icon = [UIImage imageNamed:@"casita.png"];
+        marker.map = mapView;
+    }
+    
+    self.view = mapView;
 }
 
 
