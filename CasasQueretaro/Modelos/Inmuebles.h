@@ -12,4 +12,5 @@
 @interface Inmuebles : NSObject
 - (NSArray *) getInmueblesPorTipo:(NSString*)tipo;
 - (Inmueble *) getInmueblePorId:(NSInteger)idInmueble;
+- (id) getJsonData:(NSString*)urlstr;
 @end

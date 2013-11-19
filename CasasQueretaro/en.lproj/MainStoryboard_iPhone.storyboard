@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GXs-SQ-ZS0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GXs-SQ-ZS0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -97,17 +97,103 @@
         <!--Ver InmuebleVC-->
         <scene sceneID="9dk-g5-NJm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5L-Zr-qZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sY2-sW-FIX" customClass="VerInmuebleVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KCc-8q-R6Y">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMU-ad-P3t">
+                                <subviews>
+                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GK4-0Y-gVU">
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="225" id="3OI-OG-IKe"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tUg-Ec-O4M">
+                                            <size key="itemSize" width="320" height="225"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="suC-L9-l8g">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Colonia del Inmueble" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRh-1r-8K6">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="MQI-xR-tFR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="San Miguel de Allende" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mao-3B-wbf">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="EF2-71-C5U"/>
+                                            <constraint firstAttribute="height" constant="21" id="dvM-RE-6va"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="$ 1,000,000 MXN" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mh0-S9-6He">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="bda-OB-Xjm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-Vl-vlG">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="wks-Sj-BbE"/>
+                                        </constraints>
+                                        <string key="text">Preciosa casa de dos plantas, 3 recámaras, la principal con closet, vestidor y baño, sala comedor, cocina equipada, área de televisión, cuarto de lavado, estacionamiento dos carros.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QRh-1r-8K6" firstAttribute="leading" secondItem="vMU-ad-P3t" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0tn-W5-Xc8"/>
+                                    <constraint firstItem="GK4-0Y-gVU" firstAttribute="trailing" secondItem="vMU-ad-P3t" secondAttribute="trailing" type="default" id="2qn-7s-ngc"/>
+                                    <constraint firstItem="QRh-1r-8K6" firstAttribute="top" secondItem="GK4-0Y-gVU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7I0-tk-8gE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rga-Vl-vlG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JsF-4S-Z2X"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rga-Vl-vlG" secondAttribute="bottom" constant="46" id="K29-O7-JLJ"/>
+                                    <constraint firstItem="Mao-3B-wbf" firstAttribute="leading" secondItem="vMU-ad-P3t" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SMq-GP-O36"/>
+                                    <constraint firstItem="QRh-1r-8K6" firstAttribute="centerX" secondItem="vMU-ad-P3t" secondAttribute="centerX" type="default" id="YEL-uW-x4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mh0-S9-6He" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YPP-mX-6PL"/>
+                                    <constraint firstItem="Rga-Vl-vlG" firstAttribute="leading" secondItem="vMU-ad-P3t" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fPf-va-ly3"/>
+                                    <constraint firstAttribute="trailing" secondItem="QRh-1r-8K6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gHe-Jq-69Q"/>
+                                    <constraint firstItem="GK4-0Y-gVU" firstAttribute="leading" secondItem="vMU-ad-P3t" secondAttribute="leading" type="default" id="izX-I1-N4Q"/>
+                                    <constraint firstItem="Rga-Vl-vlG" firstAttribute="top" secondItem="Mao-3B-wbf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j3p-oQ-ZFQ"/>
+                                    <constraint firstItem="GK4-0Y-gVU" firstAttribute="top" secondItem="vMU-ad-P3t" secondAttribute="top" type="default" id="sf2-3r-OTw"/>
+                                    <constraint firstItem="Mh0-S9-6He" firstAttribute="baseline" secondItem="Mao-3B-wbf" secondAttribute="baseline" type="default" id="vyG-HS-68V"/>
+                                    <constraint firstItem="Mao-3B-wbf" firstAttribute="top" secondItem="QRh-1r-8K6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yQm-I8-N65"/>
+                                    <constraint firstItem="Mh0-S9-6He" firstAttribute="top" secondItem="QRh-1r-8K6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zwE-aE-bdc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vMU-ad-P3t" firstAttribute="trailing" secondItem="KCc-8q-R6Y" secondAttribute="trailing" type="default" id="PkH-6y-voX"/>
+                            <constraint firstItem="vMU-ad-P3t" firstAttribute="top" secondItem="KCc-8q-R6Y" secondAttribute="top" constant="-46" id="SUH-ul-DKa"/>
+                            <constraint firstAttribute="bottom" secondItem="vMU-ad-P3t" secondAttribute="bottom" constant="-47" id="Vrc-x8-a8U"/>
+                            <constraint firstItem="vMU-ad-P3t" firstAttribute="leading" secondItem="KCc-8q-R6Y" secondAttribute="leading" type="default" id="YCh-7X-vFN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pcT-qr-OFn"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g5L-Zr-qZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679" y="-833"/>
+            <point key="canvasLocation" x="-1183" y="-925"/>
         </scene>
         <!--TerrenosTVC - Terrenos-->
         <scene sceneID="qlE-4Y-GqO">
@@ -367,11 +453,26 @@
         <class className="MapaVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapaVC.h"/>
         </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="OtrosTVC" superclassName="InmueblesTVC">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OtrosTVC.h"/>
         </class>
         <class className="TerrenosTVC" superclassName="InmueblesTVC">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TerrenosTVC.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="VerInmuebleVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VerInmuebleVC.h"/>
@@ -383,6 +484,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ubm-ht-4Fu"/>
+        <segue reference="LCx-xr-wHC"/>
     </inferredMetricsTieBreakers>
 </document>
