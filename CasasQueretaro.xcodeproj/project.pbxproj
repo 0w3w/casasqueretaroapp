@@ -23,6 +23,8 @@
 		A6432BFD183AD482009C01F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432BFC183AD482009C01F5 /* QuartzCore.framework */; };
 		A6432BFF183AD48A009C01F5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432BFE183AD48A009C01F5 /* SystemConfiguration.framework */; };
 		A6432C01183ADEA6009C01F5 /* casita.png in Resources */ = {isa = PBXBuildFile; fileRef = A6432C00183ADEA6009C01F5 /* casita.png */; };
+		A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6432C03183AE87B009C01F5 /* ContactoVC.m */; };
+		A6432C06183AE916009C01F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432C05183AE916009C01F5 /* MessageUI.framework */; };
 		A7573A53183A943A00FC51C4 /* InmueblesProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A52183A943A00FC51C4 /* InmueblesProxy.m */; };
 		A7573A56183A961F00FC51C4 /* CasasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A55183A961F00FC51C4 /* CasasTVC.m */; };
 		A7573A59183A969600FC51C4 /* DepartamentosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A58183A969600FC51C4 /* DepartamentosTVC.m */; };
@@ -74,6 +76,9 @@
 		A6432BFC183AD482009C01F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A6432BFE183AD48A009C01F5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A6432C00183ADEA6009C01F5 /* casita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casita.png; sourceTree = "<group>"; };
+		A6432C02183AE87B009C01F5 /* ContactoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoVC.h; sourceTree = "<group>"; };
+		A6432C03183AE87B009C01F5 /* ContactoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoVC.m; sourceTree = "<group>"; };
+		A6432C05183AE916009C01F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A7573A51183A943A00FC51C4 /* InmueblesProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesProxy.h; path = Modelos/InmueblesProxy.h; sourceTree = "<group>"; };
 		A7573A52183A943A00FC51C4 /* InmueblesProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesProxy.m; path = Modelos/InmueblesProxy.m; sourceTree = "<group>"; };
 		A7573A54183A961F00FC51C4 /* CasasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CasasTVC.h; path = Controladores/CasasTVC.h; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6432C06183AE916009C01F5 /* MessageUI.framework in Frameworks */,
 				A6432BFF183AD48A009C01F5 /* SystemConfiguration.framework in Frameworks */,
 				A6432BFD183AD482009C01F5 /* QuartzCore.framework in Frameworks */,
 				A6432BFB183AD47B009C01F5 /* OpenGLES.framework in Frameworks */,
@@ -151,6 +157,7 @@
 		A7AA0AEF1839A9F80039A1EC = {
 			isa = PBXGroup;
 			children = (
+				A6432C05183AE916009C01F5 /* MessageUI.framework */,
 				A7AA0B011839A9F80039A1EC /* CasasQueretaro */,
 				A7AA0AFA1839A9F80039A1EC /* Frameworks */,
 				A7AA0AF91839A9F80039A1EC /* Products */,
@@ -231,6 +238,8 @@
 				A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */,
 				A6432BE1183AD387009C01F5 /* MapaVC.h */,
 				A6432BE2183AD387009C01F5 /* MapaVC.m */,
+				A6432C02183AE87B009C01F5 /* ContactoVC.h */,
+				A6432C03183AE87B009C01F5 /* ContactoVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 				A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */,
 				A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */,
 				A6432BE3183AD387009C01F5 /* MapaVC.m in Sources */,
+				A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
