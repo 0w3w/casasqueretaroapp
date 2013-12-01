@@ -15,8 +15,8 @@
 @implementation CasasTVC
 
 - (void)viewDidLoad{
-    [super viewDidLoad];    
     self.tipoInmueble = [[NSString alloc] initWithFormat:@"casas"];
+    [super viewDidLoad];
 }
 
 @end

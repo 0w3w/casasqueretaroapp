@@ -47,6 +47,7 @@
     [formatter setGroupingSize:3];
     [formatter setAlwaysShowsDecimalSeparator:NO];
     [formatter setUsesGroupingSeparator:YES];
+    [formatter setMaximumFractionDigits:0];
     NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInt:self.precio]];
     return formattedString;
 }

@@ -22,7 +22,6 @@
         _inmuebles = [[InmueblesProxy alloc] init];
     }
     return _inmuebles;
-
 }
 
 - (NSCache *)imageCache{
@@ -56,6 +55,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if ([self.inmuebles getInmueblesPorTipo:self.tipoInmueble]) {
+        NSArray *allInmuebles = [self.inmuebles getInmueblesPorTipo:self.tipoInmueble];
+         NSLog(@"Cuantos?: %d",[allInmuebles count]);
         return [[self.inmuebles getInmueblesPorTipo:self.tipoInmueble] count];
     } else {
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Sin conexión a internet"
@@ -123,11 +124,12 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if(indexPath){
             if([segue.identifier isEqualToString:@"Ver Inmueble"]){
-                if([segue.destinationViewController respondsToSelector:@selector(setInmueble:)]){
-                    Inmueble* InmuebleTmp = [self.inmuebles getInmueblePorId:indexPath.row];
-                    [segue.destinationViewController performSelector:@selector(setInmueble:)
-                                                          withObject:InmuebleTmp];
-                    [segue.destinationViewController setTitle:InmuebleTmp.colonia];
+                if([segue.destinationViewController respondsToSelector:@selector(setIdInmueble:)]){
+                    NSArray *allInmuebles = [self.inmuebles getInmueblesPorTipo:self.tipoInmueble];
+                    Inmueble *inmuTmp = allInmuebles[indexPath.row];
+                    [segue.destinationViewController setIdInmueble:inmuTmp.idInmueble];
+                    [segue.destinationViewController setTitle:inmuTmp.colonia];
+                    
                 }
                 
             }

@@ -58,7 +58,9 @@
     Inmueble *inmuebleC = [self.inmueblesCache objectForKey:[NSString stringWithFormat:@"%d",idInmueble]];
     if(!inmuebleC){
         inmuebleC = [self.inmuebles getInmueblePorId:idInmueble];
-        [self.inmueblesCache setObject:inmuebleC forKey:[NSString stringWithFormat:@"%d",idInmueble]];
+        if(inmuebleC){
+            [self.inmueblesCache setObject:inmuebleC forKey:[NSString stringWithFormat:@"%d",idInmueble]];
+        }
     }
     return inmuebleC;
 }

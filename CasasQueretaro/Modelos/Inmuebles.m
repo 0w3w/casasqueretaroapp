@@ -18,7 +18,7 @@
     }else{
         urlstr = [[NSString alloc] initWithFormat:@"http://casasqueretaro.com.mx/api/inmuebles/f4574e2a6205e143f32e58a186addf96/"];
     }
-    NSLog(@"Url to Request 1: %@", urlstr);
+    //NSLog(@"Url to Request 1: %@", urlstr);
     
     id jsonArray = [self getJsonData:urlstr];
     if (jsonArray) {
@@ -30,12 +30,12 @@
 }
 
 - (Inmueble *) getInmueblePorId:(NSInteger)idInmueble{
-    NSString *urlstr = [[NSString alloc] initWithFormat:@"http://casasqueretaro.com.mx/api/inmuebles/f4574e2a6205e143f32e58a186addf96/%d",idInmueble];
+    NSString *urlstr = [[NSString alloc] initWithFormat:@"http://casasqueretaro.com.mx/api/inmueble/f4574e2a6205e143f32e58a186addf96/%d",idInmueble];
     
     NSMutableArray *inmueblesRequest;
-    NSLog(@"Url to Request 2: %@", urlstr);
+    //NSLog(@"getInmueblePorId - url : %@", urlstr);
     id jsonArray = [self getJsonData:urlstr];
-    NSLog(@"%@", jsonArray);
+    //NSLog(@"%@", jsonArray);
     if (jsonArray) {
         id jsonresult = [jsonArray objectForKey:@"inmuebles"];
         InmueblesBuilder *ib = [[InmueblesBuilder alloc] init];

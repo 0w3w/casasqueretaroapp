@@ -15,8 +15,8 @@
 @implementation OtrosTVC
 
 - (void)viewDidLoad{
-    [super viewDidLoad];
     self.tipoInmueble = [[NSString alloc] initWithFormat:@"otros"];
+    [super viewDidLoad];
 }
 
 @end

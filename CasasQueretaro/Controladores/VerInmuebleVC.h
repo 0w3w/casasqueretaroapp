@@ -10,5 +10,5 @@
 #import "Inmueble.h"
 
 @interface VerInmuebleVC : UIViewController
-@property(strong, nonatomic) Inmueble* inmueble;
+@property(nonatomic) NSInteger idInmueble;
 @end

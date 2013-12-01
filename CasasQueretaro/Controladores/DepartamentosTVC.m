@@ -15,8 +15,8 @@
 @implementation DepartamentosTVC
 
 - (void)viewDidLoad{
-    [super viewDidLoad];
     self.tipoInmueble = [[NSString alloc] initWithFormat:@"departamentos"];
+    [super viewDidLoad];
 }
 
 @end

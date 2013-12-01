@@ -15,8 +15,8 @@
 @implementation TerrenosTVC
 
 - (void)viewDidLoad{
-    [super viewDidLoad];
     self.tipoInmueble = [[NSString alloc] initWithFormat:@"terrenos"];
+    [super viewDidLoad];
 }
 
 @end
