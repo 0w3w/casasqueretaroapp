@@ -34,6 +34,20 @@
     return _imageCache;
 }
 
+- (void) viewDidLoad {
+    [super viewDidLoad]; 
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    [self updateTable];
+}
+
+- (void) updateTable {
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
+}
+
 // Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
