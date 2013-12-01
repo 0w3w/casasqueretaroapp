@@ -57,6 +57,8 @@
 		A7B2CD2F1839D7E800EB72E8 /* Inmueble.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2CD2E1839D7E800EB72E8 /* Inmueble.m */; };
 		A7B2CD321839D98F00EB72E8 /* InmueblesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2CD311839D98F00EB72E8 /* InmueblesTVC.m */; };
 		A7B2CD351839DC6E00EB72E8 /* Inmuebles.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */; };
+		FA54064B183AD0FC00B1498E /* GalleryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA54064A183AD0FC00B1498E /* GalleryVC.m */; };
+		FA82658A183EC8C30026AAC1 /* UIViewAnimationExplose.m in Sources */ = {isa = PBXBuildFile; fileRef = FA826589183EC6C60026AAC1 /* UIViewAnimationExplose.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +129,10 @@
 		A7B2CD311839D98F00EB72E8 /* InmueblesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesTVC.m; path = Controladores/InmueblesTVC.m; sourceTree = "<group>"; };
 		A7B2CD331839DC6E00EB72E8 /* Inmuebles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Inmuebles.h; path = Modelos/Inmuebles.h; sourceTree = "<group>"; };
 		A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Inmuebles.m; path = Modelos/Inmuebles.m; sourceTree = "<group>"; };
+		FA540649183AD0FC00B1498E /* GalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryVC.h; path = Controladores/GalleryVC.h; sourceTree = "<group>"; };
+		FA54064A183AD0FC00B1498E /* GalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GalleryVC.m; path = Controladores/GalleryVC.m; sourceTree = "<group>"; };
+		FA826588183EC6C60026AAC1 /* UIViewAnimationExplose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationExplose.h; sourceTree = "<group>"; };
+		FA826589183EC6C60026AAC1 /* UIViewAnimationExplose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationExplose.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,8 @@
 				A7573A54183A961F00FC51C4 /* CasasTVC.h */,
 				A7573A55183A961F00FC51C4 /* CasasTVC.m */,
 				A7573A57183A969600FC51C4 /* DepartamentosTVC.h */,
+				FA540649183AD0FC00B1498E /* GalleryVC.h */,
+				FA54064A183AD0FC00B1498E /* GalleryVC.m */,
 				A7573A58183A969600FC51C4 /* DepartamentosTVC.m */,
 				A7573A5A183A971C00FC51C4 /* TerrenosTVC.h */,
 				A7573A5B183A971C00FC51C4 /* TerrenosTVC.m */,
@@ -273,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				A7AA0B131839A9F80039A1EC /* MainStoryboard_iPhone.storyboard */,
+				FA826588183EC6C60026AAC1 /* UIViewAnimationExplose.h */,
+				FA826589183EC6C60026AAC1 /* UIViewAnimationExplose.m */,
 				A7AA0B161839A9F80039A1EC /* MainStoryboard_iPad.storyboard */,
 			);
 			name = Views;
@@ -374,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA82658A183EC8C30026AAC1 /* UIViewAnimationExplose.m in Sources */,
 				A7AA0B081839A9F80039A1EC /* main.m in Sources */,
 				A7AA0B0C1839A9F80039A1EC /* AppDelegate.m in Sources */,
 				A7B2CD2F1839D7E800EB72E8 /* Inmueble.m in Sources */,
@@ -386,9 +397,11 @@
 				A7573A5F183A974200FC51C4 /* OtrosTVC.m in Sources */,
 				A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */,
 				A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */,
+				FA54064B183AD0FC00B1498E /* GalleryVC.m in Sources */,
 				A6432BE3183AD387009C01F5 /* MapaVC.m in Sources */,
 				A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */,
 				A6F5BC9F184BD154006063AE /* Reachability.m in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

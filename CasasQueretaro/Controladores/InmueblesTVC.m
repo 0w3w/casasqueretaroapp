@@ -33,13 +33,17 @@
     return _imageCache;
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void) viewDidLoad {
     [super viewDidLoad]; 
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
                                         init];
     [refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
-    [self updateTable];
 }
 
 - (void) updateTable {
