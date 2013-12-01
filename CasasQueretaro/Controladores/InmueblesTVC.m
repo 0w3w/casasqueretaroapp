@@ -34,6 +34,24 @@
     return _imageCache;
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+- (void) viewDidLoad {
+    [super viewDidLoad]; 
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+}
+
+- (void) updateTable {
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
+}
+
 // Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -41,7 +59,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[self.inmuebles getInmueblesPorTipo:self.tipoInmueble] count];
+    if ([self.inmuebles getInmueblesPorTipo:self.tipoInmueble]) {
+        return [[self.inmuebles getInmueblesPorTipo:self.tipoInmueble] count];
+    } else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Sin conexión a internet"
+                                                          message:@"Revisa que tu wi-fi esté encendido."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -71,8 +99,6 @@
             //[NSThread sleepForTimeInterval:2.0];
             // get the UIImage
             NSString * imgFullPath = [[NSString alloc] initWithFormat:@"%@%@",inmuTmp.imgPath,inmuTmp.imgPrincipal];
-            NSLog(@"Img inmu.imgPath %@", inmuTmp.imgPath);
-            NSLog(@"Procesando imagen en el thread %@", imgFullPath);
             NSURL *imageURl = [[NSURL alloc] initWithString:imgFullPath];
             [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
             NSData *imageData = [[NSData alloc] initWithContentsOfURL: imageURl];
@@ -80,7 +106,6 @@
             UIImage *imagen = [[UIImage alloc] initWithData:imageData];
             // if we found it, then update UI
             if (imagen){
-                NSLog(@"Thread obtuvo la imagen %@", inmuTmp.imgPrincipal);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     // if the cell is visible, then set the image
                     UITableViewCell *cell2 = [self.tableView cellForRowAtIndexPath:indexPath];

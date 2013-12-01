@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Inmueble.h"
+#import "Reachability.h"
+#import <SystemConfiguration/SystemConfiguration.h>
 
 @interface Inmuebles : NSObject
 - (NSArray *) getInmueblesPorTipo:(NSString*)tipo;
 - (Inmueble *) getInmueblePorId:(NSInteger)idInmueble;
+- (id) getJsonData:(NSString*)urlstr;
+- (BOOL)connected;
 @end
