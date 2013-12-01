@@ -41,7 +41,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[self.inmuebles getInmueblesPorTipo:self.tipoInmueble] count];
+    if ([self.inmuebles getInmueblesPorTipo:self.tipoInmueble]) {
+        return [[self.inmuebles getInmueblesPorTipo:self.tipoInmueble] count];
+    } else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Sin conexión a internet"
+                                                          message:@"Revisa que tu wi-fi esté encendido."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

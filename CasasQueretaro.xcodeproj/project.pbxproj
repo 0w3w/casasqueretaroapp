@@ -25,6 +25,7 @@
 		A6432C01183ADEA6009C01F5 /* casita.png in Resources */ = {isa = PBXBuildFile; fileRef = A6432C00183ADEA6009C01F5 /* casita.png */; };
 		A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6432C03183AE87B009C01F5 /* ContactoVC.m */; };
 		A6432C06183AE916009C01F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6432C05183AE916009C01F5 /* MessageUI.framework */; };
+		A6F5BC9F184BD154006063AE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F5BC9E184BD153006063AE /* Reachability.m */; };
 		A7573A53183A943A00FC51C4 /* InmueblesProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A52183A943A00FC51C4 /* InmueblesProxy.m */; };
 		A7573A56183A961F00FC51C4 /* CasasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A55183A961F00FC51C4 /* CasasTVC.m */; };
 		A7573A59183A969600FC51C4 /* DepartamentosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A58183A969600FC51C4 /* DepartamentosTVC.m */; };
@@ -79,6 +80,8 @@
 		A6432C02183AE87B009C01F5 /* ContactoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoVC.h; sourceTree = "<group>"; };
 		A6432C03183AE87B009C01F5 /* ContactoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoVC.m; sourceTree = "<group>"; };
 		A6432C05183AE916009C01F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A6F5BC9D184BD153006063AE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A6F5BC9E184BD153006063AE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		A7573A51183A943A00FC51C4 /* InmueblesProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesProxy.h; path = Modelos/InmueblesProxy.h; sourceTree = "<group>"; };
 		A7573A52183A943A00FC51C4 /* InmueblesProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesProxy.m; path = Modelos/InmueblesProxy.m; sourceTree = "<group>"; };
 		A7573A54183A961F00FC51C4 /* CasasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CasasTVC.h; path = Controladores/CasasTVC.h; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 		A7B2CD2A1839D50F00EB72E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A6F5BC9D184BD153006063AE /* Reachability.h */,
+				A6F5BC9E184BD153006063AE /* Reachability.m */,
 				A7573A71183AAAA600FC51C4 /* InmueblesBuilder.h */,
 				A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */,
 				A7B2CD2D1839D7E800EB72E8 /* Inmueble.h */,
@@ -383,6 +388,7 @@
 				A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */,
 				A6432BE3183AD387009C01F5 /* MapaVC.m in Sources */,
 				A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */,
+				A6F5BC9F184BD154006063AE /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

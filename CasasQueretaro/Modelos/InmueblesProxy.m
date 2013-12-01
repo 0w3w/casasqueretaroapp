@@ -47,7 +47,9 @@
     NSArray *tipoArr = [self.inmueblesTipoCache objectForKey:tipo];
     if(!tipoArr){
         tipoArr = [self.inmuebles getInmueblesPorTipo:tipo];
-        [self.inmueblesTipoCache setObject:tipoArr forKey:tipo];
+        if (tipoArr) {
+            [self.inmueblesTipoCache setObject:tipoArr forKey:tipo];
+        }
     }
     return tipoArr;
 }

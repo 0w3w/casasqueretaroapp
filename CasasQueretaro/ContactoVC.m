@@ -71,10 +71,7 @@
     [mc setToRecipients:toRecipents];
     
     // Present mail view controller on screen
-    //[self presentViewController:mc animated:YES completion:NULL];
-    [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:mc
-                                                                                             animated:YES
-                                                                                           completion:nil];
+    [self presentViewController:mc animated:YES completion:NULL];
 }
 
 
