@@ -60,7 +60,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if ([self.inmuebles getInmueblesPorTipo:self.tipoInmueble]) {
         NSArray *allInmuebles = [self.inmuebles getInmueblesPorTipo:self.tipoInmueble];
-         NSLog(@"Cuantos?: %d",[allInmuebles count]);
         return [[self.inmuebles getInmueblesPorTipo:self.tipoInmueble] count];
     } else {
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Sin conexión a internet"
