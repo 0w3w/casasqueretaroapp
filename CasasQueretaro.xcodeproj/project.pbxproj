@@ -41,6 +41,7 @@
 		A7573A70183A9FAE00FC51C4 /* VerInmuebleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A6F183A9FAE00FC51C4 /* VerInmuebleVC.m */; };
 		A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */; };
 		A7573A75183AAAC400FC51C4 /* noImage300x225.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A74183AAAC400FC51C4 /* noImage300x225.png */; };
+		A78195D2184BF97600B9B08C /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78195D1184BF97600B9B08C /* ImageView.m */; };
 		A7AA0AFC1839A9F80039A1EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFB1839A9F80039A1EC /* UIKit.framework */; };
 		A7AA0AFE1839A9F80039A1EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFD1839A9F80039A1EC /* Foundation.framework */; };
 		A7AA0B001839A9F80039A1EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFF1839A9F80039A1EC /* CoreGraphics.framework */; };
@@ -106,6 +107,8 @@
 		A7573A71183AAAA600FC51C4 /* InmueblesBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InmueblesBuilder.h; path = Modelos/InmueblesBuilder.h; sourceTree = "<group>"; };
 		A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InmueblesBuilder.m; path = Modelos/InmueblesBuilder.m; sourceTree = "<group>"; };
 		A7573A74183AAAC400FC51C4 /* noImage300x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage300x225.png; sourceTree = "<group>"; };
+		A78195D0184BF97600B9B08C /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
+		A78195D1184BF97600B9B08C /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
 		A7AA0AF81839A9F80039A1EC /* CasasQueretaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasasQueretaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AA0AFB1839A9F80039A1EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7AA0AFD1839A9F80039A1EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -284,6 +287,8 @@
 				FA826588183EC6C60026AAC1 /* UIViewAnimationExplose.h */,
 				FA826589183EC6C60026AAC1 /* UIViewAnimationExplose.m */,
 				A7AA0B161839A9F80039A1EC /* MainStoryboard_iPad.storyboard */,
+				A78195D0184BF97600B9B08C /* ImageView.h */,
+				A78195D1184BF97600B9B08C /* ImageView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -401,7 +406,7 @@
 				A6432BE3183AD387009C01F5 /* MapaVC.m in Sources */,
 				A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */,
 				A6F5BC9F184BD154006063AE /* Reachability.m in Sources */,
-
+				A78195D2184BF97600B9B08C /* ImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
