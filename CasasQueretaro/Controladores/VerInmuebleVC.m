@@ -56,7 +56,54 @@
     [self.labelEstado setText:self.inmueble.ciudad];
     [self.labelPrecio setText:[NSString stringWithFormat:@"%@ %@", [self.inmueble getFormatedPrecio], self.inmueble.moneda]];
     [self.labelDescripcion setText:self.inmueble.descripcion];
+    
 }
+
+// Contacto 
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller
+           didFinishWithResult:(MFMailComposeResult)result
+                         error:(NSError *)error{
+    switch (result){
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (IBAction)clickContacto:(id)sender {
+    // Email Subject
+    NSString *emailTitle = [[NSString alloc] initWithFormat:@"Informes inmueble en %@ (%d) - iPhone",self.inmueble.colonia,self.inmueble.idInmueble];
+    // Email Content
+    NSString *messageBody = @"Buenos días;<br><br>Me gustaría pedir informes del inmueble... ";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"ventas@casasqueretaro.com.mx"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:YES];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
 
 // Collection View Photos
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)asker{
@@ -73,10 +120,6 @@
     if ([cell isKindOfClass:[ImageView class]]) {
         ImageView *myPhotoCell = (ImageView *)cell;
         NSString *nombreImagen = [[NSString alloc] initWithFormat:@"%@%@",self.inmueble.imgPath,self.inmueble.imagenes[indexPath.item]];
-        /*
-        UIImage *imagen = [UIImage imageNamed:nombreImagen];
-        myPhotoCell.imageOutlet.image=imagen;
-        */
         
         UIImage *image = [self.imageCache objectForKey:self.inmueble.imagenes[indexPath.item]];
         if (image){
@@ -87,7 +130,6 @@
             NSInteger nheight = 179;
             NSInteger nwidth  = (indexPath.row == 0)?330:nheight * owidth / oheight;
             myPhotoCell.imageOutlet.frame = CGRectMake(myPhotoCell.imageOutlet.frame.origin.x, myPhotoCell.imageOutlet.frame.origin.y,nwidth,nheight);
-            [myPhotoCell sizeToFit];
         }else{
             myPhotoCell.imageOutlet.image = [UIImage imageNamed:@"noImage300x225.png"];
             NSInteger oheight = myPhotoCell.imageOutlet.image.size.height;
@@ -95,11 +137,9 @@
             NSInteger nheight = 179;
             NSInteger nwidth  = (indexPath.row == 0)?330:nheight * owidth / oheight;
             myPhotoCell.imageOutlet.frame = CGRectMake(myPhotoCell.imageOutlet.frame.origin.x, myPhotoCell.imageOutlet.frame.origin.y,nwidth,nheight);
-            [myPhotoCell sizeToFit];
             // the get the image in the background
             dispatch_queue_t imageFetcherQ = dispatch_queue_create("inmueble image fetcher", NULL);
             dispatch_async(imageFetcherQ, ^{
-                //[NSThread sleepForTimeInterval:2.0];
                 // get the UIImage
                 NSString * imgFullPath = nombreImagen;
                 NSURL *imageURl = [[NSURL alloc] initWithString:imgFullPath];
@@ -119,7 +159,6 @@
                             NSInteger nheight = 179;
                             NSInteger nwidth  = (indexPath.row == 0)?330:nheight * owidth / oheight;
                             myPhotoCell2.imageOutlet.frame = CGRectMake(myPhotoCell2.imageOutlet.frame.origin.x, myPhotoCell2.imageOutlet.frame.origin.y,nwidth,nheight);
-                            [myPhotoCell2 sizeToFit];
                         }
                     });
                     [self.imageCache setObject:imagen

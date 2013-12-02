@@ -58,9 +58,9 @@
 - (void) cargarControladorMail
 {
     // Email Subject
-    NSString *emailTitle = @"Contacto Casas Querétaro";
+    NSString *emailTitle = @"Contacto CasasQueretaro App";
     // Email Content
-    NSString *messageBody = @"<h1>Gracias por contactarnos, a la brevedad nos comunicaremos contigo</h1>";
+    NSString *messageBody = @"Buenos días; <br>Me gustaría pedir informes...";
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"ventas@casasqueretaro.com.mx"];
     

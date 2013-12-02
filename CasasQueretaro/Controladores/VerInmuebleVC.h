@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "Inmueble.h"
 
-@interface VerInmuebleVC : UIViewController
+@interface VerInmuebleVC : UIViewController <MFMailComposeViewControllerDelegate>
 @property(nonatomic) NSInteger idInmueble;
 @end
