@@ -99,7 +99,7 @@
             <objects>
                 <viewController id="sY2-sW-FIX" customClass="VerInmuebleVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KCc-8q-R6Y">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMU-ad-P3t">
@@ -363,6 +363,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapa" image="btn_mapa36x36.png" id="In8-KP-5Mm"/>
+                    <connections>
+                        <segue destination="sY2-sW-FIX" kind="push" identifier="Ver inmueble" id="J1y-Wp-ZjR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teo-8e-NNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,12 +493,70 @@
         <image name="btn_otro36x36.png" width="36" height="36"/>
         <image name="btn_terreno36x36.png" width="36" height="36"/>
     </resources>
+    <classes>
+        <class className="CasasTVC" superclassName="InmueblesTVC">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CasasTVC.h"/>
+        </class>
+        <class className="ContactoVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactoVC.h"/>
+            <relationships>
+                <relationship kind="action" name="botonEnviarCorreo:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="DepartamentosTVC" superclassName="InmueblesTVC">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DepartamentosTVC.h"/>
+        </class>
+        <class className="GalleryVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GalleryVC.h"/>
+        </class>
+        <class className="ImageView" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageOutlet" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="InmueblesTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InmueblesTVC.h"/>
+        </class>
+        <class className="MapaVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapaVC.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OtrosTVC" superclassName="InmueblesTVC">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OtrosTVC.h"/>
+        </class>
+        <class className="TerrenosTVC" superclassName="InmueblesTVC">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TerrenosTVC.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="VerInmuebleVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VerInmuebleVC.h"/>
+            <relationships>
+                <relationship kind="action" name="clickContacto:"/>
+                <relationship kind="outlet" name="imagesCollectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="labelColonia" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelDescripcion" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="labelEstado" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPrecio" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ubm-ht-4Fu"/>
+        <segue reference="J1y-Wp-ZjR"/>
     </inferredMetricsTieBreakers>
 </document>

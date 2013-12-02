@@ -42,6 +42,7 @@
 		A7573A73183AAAA600FC51C4 /* InmueblesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7573A72183AAAA600FC51C4 /* InmueblesBuilder.m */; };
 		A7573A75183AAAC400FC51C4 /* noImage300x225.png in Resources */ = {isa = PBXBuildFile; fileRef = A7573A74183AAAC400FC51C4 /* noImage300x225.png */; };
 		A78195D2184BF97600B9B08C /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78195D1184BF97600B9B08C /* ImageView.m */; };
+		A78195D5184C0FEF00B9B08C /* CustomGMSMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = A78195D4184C0FEF00B9B08C /* CustomGMSMarker.m */; };
 		A7AA0AFC1839A9F80039A1EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFB1839A9F80039A1EC /* UIKit.framework */; };
 		A7AA0AFE1839A9F80039A1EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFD1839A9F80039A1EC /* Foundation.framework */; };
 		A7AA0B001839A9F80039A1EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AA0AFF1839A9F80039A1EC /* CoreGraphics.framework */; };
@@ -109,6 +110,8 @@
 		A7573A74183AAAC400FC51C4 /* noImage300x225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage300x225.png; sourceTree = "<group>"; };
 		A78195D0184BF97600B9B08C /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
 		A78195D1184BF97600B9B08C /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
+		A78195D3184C0FEF00B9B08C /* CustomGMSMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGMSMarker.h; path = Modelos/CustomGMSMarker.h; sourceTree = "<group>"; };
+		A78195D4184C0FEF00B9B08C /* CustomGMSMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomGMSMarker.m; path = Modelos/CustomGMSMarker.m; sourceTree = "<group>"; };
 		A7AA0AF81839A9F80039A1EC /* CasasQueretaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasasQueretaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AA0AFB1839A9F80039A1EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7AA0AFD1839A9F80039A1EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -306,6 +309,8 @@
 				A7B2CD341839DC6E00EB72E8 /* Inmuebles.m */,
 				A7573A51183A943A00FC51C4 /* InmueblesProxy.h */,
 				A7573A52183A943A00FC51C4 /* InmueblesProxy.m */,
+				A78195D3184C0FEF00B9B08C /* CustomGMSMarker.h */,
+				A78195D4184C0FEF00B9B08C /* CustomGMSMarker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				A6432C04183AE87B009C01F5 /* ContactoVC.m in Sources */,
 				A6F5BC9F184BD154006063AE /* Reachability.m in Sources */,
 				A78195D2184BF97600B9B08C /* ImageView.m in Sources */,
+				A78195D5184C0FEF00B9B08C /* CustomGMSMarker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
